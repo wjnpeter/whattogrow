@@ -1,0 +1,500 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Forecast Popover 1`] = `
+<div
+  className="MuiCircularProgress-root MuiCircularProgress-colorSecondary MuiCircularProgress-indeterminate"
+  role="progressbar"
+  style={
+    Object {
+      "height": 20,
+      "width": 20,
+    }
+  }
+>
+  <svg
+    className="MuiCircularProgress-svg"
+    viewBox="22 22 44 44"
+  >
+    <circle
+      className="MuiCircularProgress-circle MuiCircularProgress-circleIndeterminate"
+      cx={44}
+      cy={44}
+      fill="none"
+      r={20.2}
+      strokeWidth={3.6}
+      style={Object {}}
+    />
+  </svg>
+</div>
+`;
+
+exports[`Home page 1`] = `
+Array [
+  <div
+    className="MuiContainer-root makeStyles-container-1 MuiContainer-maxWidthLg"
+  >
+    <video
+      autoPlay={true}
+      className="makeStyles-background-3"
+      muted={true}
+      poster="/images/2461326-poster.jpg"
+    >
+      <source
+        src="/images/2461326.mp4"
+        type="video/mp4"
+      />
+    </video>
+    <div
+      className="makeStyles-overlay-5"
+    />
+    <button
+      className="MuiButtonBase-root makeStyles-brand-4"
+      disabled={false}
+      onBlur={[Function]}
+      onClick={[Function]}
+      onDragLeave={[Function]}
+      onFocus={[Function]}
+      onKeyDown={[Function]}
+      onKeyUp={[Function]}
+      onMouseDown={[Function]}
+      onMouseEnter={[Function]}
+      onMouseLeave={[Function]}
+      onMouseUp={[Function]}
+      onTouchEnd={[Function]}
+      onTouchMove={[Function]}
+      onTouchStart={[Function]}
+      tabIndex={0}
+      type="button"
+    >
+      <img
+        height="32"
+        src="/images/icons/logo.svg"
+      />
+    </button>
+    <div
+      className="MuiContainer-root makeStyles-content-6 MuiContainer-maxWidthSm"
+    >
+      <h1
+        className="makeStyles-heading-2"
+      >
+        Search a selection of plants suit my location, climate and timing.
+      </h1>
+      <div
+        aria-expanded={false}
+        aria-owns={null}
+        className="MuiAutocomplete-root MuiAutocomplete-fullWidth MuiAutocomplete-hasClearIcon"
+        onClick={[Function]}
+        onKeyDown={[Function]}
+        onMouseDown={[Function]}
+        role="combobox"
+      >
+        <div
+          className="MuiBox-root MuiBox-root-53"
+        >
+          <div
+            className="MuiGrid-root MuiGrid-container MuiGrid-justify-xs-flex-end"
+          >
+            <div
+              className="MuiGrid-root makeStyles-gridLeft-21 MuiGrid-item"
+            >
+              <div
+                className="MuiFormControl-root MuiTextField-root MuiFormControl-fullWidth"
+              >
+                <div
+                  className="MuiInputBase-root MuiOutlinedInput-root makeStyles-textFieldInput-23 MuiInputBase-fullWidth MuiInputBase-formControl MuiInputBase-adornedEnd MuiOutlinedInput-adornedEnd"
+                  onClick={[Function]}
+                >
+                  <input
+                    aria-activedescendant={null}
+                    aria-autocomplete="both"
+                    aria-controls={null}
+                    aria-invalid={false}
+                    autoCapitalize="none"
+                    autoComplete="off"
+                    autoFocus={false}
+                    className="MuiInputBase-input MuiOutlinedInput-input MuiAutocomplete-input MuiAutocomplete-inputFocused MuiInputBase-inputAdornedEnd MuiOutlinedInput-inputAdornedEnd"
+                    disabled={false}
+                    onAnimationStart={[Function]}
+                    onBlur={[Function]}
+                    onChange={[Function]}
+                    onFocus={[Function]}
+                    onMouseDown={[Function]}
+                    placeholder="City | Town | Address"
+                    required={false}
+                    spellCheck="false"
+                    type="text"
+                    value=""
+                  />
+                  <div
+                    className="MuiAutocomplete-endAdornment"
+                  >
+                    <button
+                      aria-label="Clear"
+                      className="MuiButtonBase-root MuiIconButton-root MuiAutocomplete-clearIndicator"
+                      disabled={false}
+                      onBlur={[Function]}
+                      onClick={[Function]}
+                      onDragLeave={[Function]}
+                      onFocus={[Function]}
+                      onKeyDown={[Function]}
+                      onKeyUp={[Function]}
+                      onMouseDown={[Function]}
+                      onMouseLeave={[Function]}
+                      onMouseUp={[Function]}
+                      onTouchEnd={[Function]}
+                      onTouchMove={[Function]}
+                      onTouchStart={[Function]}
+                      tabIndex={-1}
+                      title="Clear"
+                      type="button"
+                    >
+                      <span
+                        className="MuiIconButton-label"
+                      >
+                        <svg
+                          aria-hidden={true}
+                          className="MuiSvgIcon-root MuiSvgIcon-fontSizeSmall"
+                          focusable="false"
+                          viewBox="0 0 24 24"
+                        >
+                          <path
+                            d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"
+                          />
+                        </svg>
+                      </span>
+                    </button>
+                  </div>
+                  <fieldset
+                    aria-hidden={true}
+                    className="PrivateNotchedOutline-root-213 MuiOutlinedInput-notchedOutline"
+                    style={
+                      Object {
+                        "paddingLeft": 8,
+                      }
+                    }
+                  >
+                    <legend
+                      className="PrivateNotchedOutline-legend-214"
+                      style={
+                        Object {
+                          "width": 0.01,
+                        }
+                      }
+                    >
+                      <span
+                        dangerouslySetInnerHTML={
+                          Object {
+                            "__html": "&#8203;",
+                          }
+                        }
+                      />
+                    </legend>
+                  </fieldset>
+                </div>
+              </div>
+            </div>
+            <div
+              className="MuiGrid-root makeStyles-gridRight-22 MuiGrid-item"
+              onClick={[Function]}
+            >
+              <svg
+                aria-hidden={true}
+                className="MuiSvgIcon-root makeStyles-gridRightIcon-19"
+                focusable="false"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"
+                />
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>,
+  <div
+    className="MuiContainer-root makeStyles-footer-7 MuiContainer-maxWidthLg"
+  >
+    <span
+      className="MuiTypography-root MuiTypography-caption"
+    >
+      May・Autumn・2020
+    </span>
+  </div>,
+]
+`;
+
+exports[`Location - Agriculture 1`] = `null`;
+
+exports[`Location - Historical 1`] = `
+Array [
+  <div
+    className="MuiCircularProgress-root MuiCircularProgress-colorSecondary MuiCircularProgress-indeterminate"
+    role="progressbar"
+    style={
+      Object {
+        "height": 20,
+        "width": 20,
+      }
+    }
+  >
+    <svg
+      className="MuiCircularProgress-svg"
+      viewBox="22 22 44 44"
+    >
+      <circle
+        className="MuiCircularProgress-circle MuiCircularProgress-circleIndeterminate"
+        cx={44}
+        cy={44}
+        fill="none"
+        r={20.2}
+        strokeWidth={3.6}
+        style={Object {}}
+      />
+    </svg>
+  </div>,
+  <div
+    className="MuiCircularProgress-root MuiCircularProgress-colorSecondary MuiCircularProgress-indeterminate"
+    role="progressbar"
+    style={
+      Object {
+        "height": 20,
+        "width": 20,
+      }
+    }
+  >
+    <svg
+      className="MuiCircularProgress-svg"
+      viewBox="22 22 44 44"
+    >
+      <circle
+        className="MuiCircularProgress-circle MuiCircularProgress-circleIndeterminate"
+        cx={44}
+        cy={44}
+        fill="none"
+        r={20.2}
+        strokeWidth={3.6}
+        style={Object {}}
+      />
+    </svg>
+  </div>,
+]
+`;
+
+exports[`Location - LocZone 1`] = `null`;
+
+exports[`Location - Soil 1`] = `
+<table
+  cellSpacing={0}
+  className="makeStyles-table-274"
+>
+  <thead>
+    <tr>
+      <th
+        className="makeStyles-borderRight-277 makeStyles-borderBottom-276"
+      >
+        <p
+          className="MuiTypography-root MuiTypography-body1"
+        >
+          Depth
+        </p>
+      </th>
+      <th
+        className="makeStyles-borderBottom-276"
+      >
+        <p
+          className="MuiTypography-root MuiTypography-body1"
+        >
+          Temperature(°C)
+        </p>
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td
+        className="makeStyles-td-275 makeStyles-borderRight-277"
+      >
+        <div
+          style={
+            Object {
+              "height": "10%",
+            }
+          }
+        >
+          <p
+            className="MuiTypography-root MuiTypography-body1"
+          >
+            5cm
+          </p>
+          <div
+            className="makeStyles-circle-279"
+          />
+        </div>
+        <div
+          style={
+            Object {
+              "height": "10%",
+            }
+          }
+        >
+          <p
+            className="MuiTypography-root MuiTypography-body1"
+          >
+            10cm
+          </p>
+          <div
+            className="makeStyles-circle-279"
+          />
+        </div>
+        <div
+          style={
+            Object {
+              "height": "15%",
+            }
+          }
+        >
+          <p
+            className="MuiTypography-root MuiTypography-body1"
+          >
+            20cm
+          </p>
+          <div
+            className="makeStyles-circle-279"
+          />
+        </div>
+        <div
+          style={
+            Object {
+              "height": "25%",
+            }
+          }
+        >
+          <p
+            className="MuiTypography-root MuiTypography-body1"
+          >
+            50cm
+          </p>
+          <div
+            className="makeStyles-circle-279"
+          />
+        </div>
+        <div
+          style={
+            Object {
+              "height": "40%",
+            }
+          }
+        >
+          <p
+            className="MuiTypography-root MuiTypography-body1"
+          >
+            1m
+          </p>
+          <div
+            className="makeStyles-arrow-278"
+          />
+        </div>
+      </td>
+      <td
+        className="makeStyles-td-275"
+      >
+        <div
+          style={
+            Object {
+              "height": "10%",
+            }
+          }
+        >
+          <p
+            className="MuiTypography-root MuiTypography-body1"
+          >
+            No data detected
+          </p>
+        </div>
+        <div
+          style={
+            Object {
+              "height": "10%",
+            }
+          }
+        >
+          <p
+            className="MuiTypography-root MuiTypography-body1"
+          >
+            No data detected
+          </p>
+        </div>
+        <div
+          style={
+            Object {
+              "height": "15%",
+            }
+          }
+        >
+          <p
+            className="MuiTypography-root MuiTypography-body1"
+          >
+            No data detected
+          </p>
+        </div>
+        <div
+          style={
+            Object {
+              "height": "25%",
+            }
+          }
+        >
+          <p
+            className="MuiTypography-root MuiTypography-body1"
+          >
+            No data detected
+          </p>
+        </div>
+        <div
+          style={
+            Object {
+              "height": "40%",
+            }
+          }
+        >
+          <p
+            className="MuiTypography-root MuiTypography-body1"
+          >
+            No data detected
+          </p>
+        </div>
+      </td>
+    </tr>
+  </tbody>
+</table>
+`;
+
+exports[`Moon Popover 1`] = `
+<div
+  className="MuiCircularProgress-root MuiCircularProgress-colorSecondary MuiCircularProgress-indeterminate"
+  role="progressbar"
+  style={
+    Object {
+      "height": 20,
+      "width": 20,
+    }
+  }
+>
+  <svg
+    className="MuiCircularProgress-svg"
+    viewBox="22 22 44 44"
+  >
+    <circle
+      className="MuiCircularProgress-circle MuiCircularProgress-circleIndeterminate"
+      cx={44}
+      cy={44}
+      fill="none"
+      r={20.2}
+      strokeWidth={3.6}
+      style={Object {}}
+    />
+  </svg>
+</div>
+`;

@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="315" height="118" viewBox="0 0 315 118">
+  <g id="Group_124" data-name="Group 124" transform="translate(1112 -724)">
+    <text id="GROW" transform="translate(-1112 724)" fill="#c1dc74" font-size="100" font-family="Harrington"><tspan x="0" y="95">GROW</tspan></text>
+    <path id="Icon_awesome-search" data-name="Icon awesome-search" d="M83.536,73.231,67.044,56.739a3.967,3.967,0,0,0-2.812-1.158h-2.7C66.1,49.741,49.741,66.1,55.581,61.536v2.7a3.967,3.967,0,0,0,1.158,2.812L73.231,83.536a3.954,3.954,0,0,0,5.608,0l4.681-4.681a3.989,3.989,0,0,0,.017-5.624Z" transform="translate(-983 752)" fill="none" stroke="#c1dc74" stroke-width="4"/>
+    <g id="Ellipse_17" data-name="Ellipse 17" transform="translate(-956 773)" fill="none" stroke="#c1dc74" stroke-width="4">
+      <ellipse cx="13.5" cy="15.5" rx="13.5" ry="15.5" stroke="none"/>
+      <ellipse cx="13.5" cy="15.5" rx="11.5" ry="13.5" fill="none"/>
+    </g>
+  </g>
+</svg>
