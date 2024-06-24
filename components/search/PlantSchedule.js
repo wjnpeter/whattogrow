@@ -1,7 +1,7 @@
 import clsx from 'clsx';
 
-import {Avatar, Typography, Grid} from '@material-ui/core';
-import { makeStyles } from '@material-ui/core/styles';
+import {Avatar, Typography, Grid} from '@mui/material';
+import { makeStyles } from '@mui/styles';
 
 const useStyles = makeStyles((theme) => ({
   root: {

@@ -1,0 +1,125 @@
+name,category,time.z5,time.z6,time.z4,time.z2,time.z3,time.z1,depth,rowSpacing,spacing,frost,sow,germination,maturity
+Amaranth,Vegetable,Sep-Nov,Sep-Nov,Aug-Mar,Aug-Mar,Aug-Apr,Mar-Aug,5,50-80,50,FT,D,5-20,50-60
+Artichoke,Vegetable,Sep-Nov,Sep-Nov,Aug-Nov,Aug-Nov,Aug-Nov,Feb-Aug,6,150-250,150-200,H,D,15-25,290-400
+Asparagus,Vegetable,Sep-Nov,Sep-Nov,Aug-Nov,Aug-Nov,Aug-Nov,Mar-Oct,10,100,20-40,FT,D,20-35,730-1095
+"Bean,Broad",Vegetable,"Mar-May,Aug-Sep","Mar-May,Aug-Sep",Mar-Jul,Mar-Jul,Mar-Jun,Apr-Jun,40-50,60-80,15-25,H,D,10-20,90-150
+"Bean,Bush",Vegetable,Oct-Jan,Oct-Jan,Sep-Feb,Sep-Feb,Aug-Apr,Feb-Oct,20-30,40-60,7-15,FT,D,7-15,50-80
+"Bean,Climbing",Vegetable,Oct-Dec,Oct-Dec,Sep-Jan,Sep-Jan,Aug-Apr,Feb-Oct,20-30,100,10-25,FT,D,7-15,70-85
+Beetroot,Vegetable,Sep-Apr,Sep-Apr,Jul-Apr,Jul-Apr,Feb-Oct,Mar-Jun,20-30,30-40,5-10,H,D,15-25,55-85
+Broccoli,Vegetable,Nov-Mar,Nov-Mar,Sep-Apr,Sep-Apr,Feb-Jun,Mar-Jun,6,40-60,35-45,H,R/D,15-25,60-120
+Brussels Sprouts,Vegetable,Oct-Feb,Oct-Feb,Dec-Apr,Dec-Apr,Feb-Jun,Feb-Apr,6,90,50-75,H,R/D,6-12,80-140
+Burdock,Vegetable,Sep-Feb,Sep-Feb,Sep-Apr,Sep-Apr,Aug-May,Feb-Sep,15,60,60,H,D/R,10-20,120-140
+Cabbage,Vegetable,Aug-Apr,Aug-Apr,Jun-Apr,Jun-Apr,Jan-Dec,Feb-Nov,6,50-70,40-50,H,R/D,6-12,60-120
+"Cabbage,Chinese",Vegetable,Aug-Mar,Aug-Mar,Jul-Aug,Jul-Aug,Jan-Dec,Feb-Nov,6,40,30,H,D,6-12,60-80
+Cape Gooseberry,Vegetable,Sep-Nov,Sep-Nov,Aug-Dec,Aug-Dec,Jul-Mar,Jan-Dec,4,100,50,FT,R,15-30,140-160
+Capsicum,Vegetable,Sep-Nov,Sep-Nov,Aug-Dec,Aug-Dec,Aug-Mar,Jan-Dec,4,80-100,40-60,FT,R/D,10-20,70-110
+Carrot,Vegetable,Aug-Mar,Aug-Mar,Sep-May,Sep-May,Feb-Nov,Feb-Sep,4,25-30,3-8,"HH",D,10-20,70-120
+Cauliflower,Vegetable,Nov-Apr,Nov-Apr,Dec-Apr,Dec-Apr,Jan-May,Jan-Apr,6,75-90,45-70,H,R/D,6-12,100-160
+Celeriac,Vegetable,Oct-Jan,Oct-Jan,Sep-Dec,Sep-Dec,Mar-Oct,Apr-Jul,4,40-70,15-25,H,R,,90-140
+Celery,Vegetable,Sep-Dec,Sep-Dec,Sep-Feb,Sep-Feb,Mar-Oct,Apr-Sep,4,30-55,15-30,H,R,15-25,120-140
+Chilli,Vegetable,Sep-Nov,Sep-Nov,Aug-Dec,Aug-Dec,Jul-Mar,Jan-Dec,4,80-100,40-60,FT,R/D,10-20,60-110
+"Corn,Sweet",Vegetable,Oct-Jan,Oct-Jan,Sep-Jan,Sep-Jan,Aug-Feb,Jan-Dec,15-25,50-90,20-30,FT,D,6-12,80-120
+Cucumber,Vegetable,Oct-Dec,Oct-Dec,Sep-Feb,Sep-Feb,July-Mar,Feb-Sep,10,100-120,40-60,FT,D,10-15,60-90
+Eggplant,Vegetable,Oct-Dec,Oct-Dec,Sep-Feb,Sep-Feb,Aug-Mar,Jan-Dec,4,80-90,50-75,FT,R/D,10-20,90-120
+Endive,Vegetable,"Sep-Nov,Feb-Mar","Sep-Nov,Feb-Mar","Aug-Nov,Feb-Apr","Aug-Nov,Feb-Apr",Mar-Jul,Apr-Jul,5,20-30,20-30,H,R/D,10-20,50-80
+Kale,Vegetable,Jan-Apr,Jan-Apr,Mar-Jun,Mar-Jun,Mar-Jun,Apr-Aug,10,50-100,40-60,H,R/D,6-12,50-70
+Kohl Rabi,Vegetable,Aug-Mar,Aug-Mar,Aug-May,Aug-May,Mar-Aug,Mar-Aug,6,30-40,10-20,H,D,6-12,55-70
+Leek,Vegetable,Sep-Apr,Sep-Apr,Aug-Apr,Aug-Apr,Jan-May,Feb-May,4,30-40,10-20,H,R,10-20,90-140
+Lettuce,Vegetable,Sep-May,Sep-May,Jan-Dec,Jan-Dec,Jan-Dec,Apr-Nov,5,20-30,20-30,H,R/D,6-12,60-90
+Mizuna,Vegetable,Aug-Mar,Aug-Mar,Jul-Aug,Jul-Aug,Jan-Dec,Jan-Dec,6,20-30,20-30,H,R/D,6-12,35-50
+Mustard,Vegetable,Jan-Dec,Jan-Dec,Jan-Dec,Jan-Dec,Jan-Dec,Jan-Dec,6,40-60,30-40,H,D,6-12,30-60
+Okra,Vegetable,Oct-Dec,Oct-Dec,Sep-Dec,Sep-Dec,Aug-Feb,Jan-Dec,10,90-120,35-60,FT,R/D,10-20,80-140
+Onion,Vegetable,Feb-Sep,Feb-Sep,Feb-Aug,Feb-Aug,Feb-Jun,Feb-May,5,25-40,5-10,H,R/D,10-20,160-230
+Parsnip,Vegetable,Aug-Feb,Aug-Feb,Jul-Mar,Jul-Mar,Feb-Sep,Mar-Aug,5,35-50,5-10,H,D,20-30,120-140
+Pea,Vegetable,Jan-Oct,Jan-Oct,Feb-Sep,Feb-Sep,Mar-Jul,Mar-Jun,20-30,40-60,5-10,H,D,8-16,65-90
+Pumpkin,Vegetable,Oct-Dec,Oct-Dec,Sep-Dec,Sep-Dec,Aug-Mar,Feb-Nov,15-20,100-200,100-150,FT,D,8-16,100-140
+Radish,Vegetable,Aug-Jun,Aug-Jun,Jan-Dec,Jan-Dec,Jan-Dec,Jan-Dec,15,20-30,3-7,H,D,5-10,40-60
+Rhubarb,Vegetable,Sep-Dec,Sep-Dec,Aug-Jan,Aug-Jan,Jun-Mar,Jun-Sep,10,40-60,40-50,FT,R/D,5-10,100-140
+Rockmelon,Vegetable,Oct-Dec,Oct-Dec,Sep-Dec,Sep-Dec,Jul-Jan,Jan-Dec,15,130-160,90-120,H,D,8-16,100-120
+Rocket,Vegetable,"Sep-Nov,Feb-Mar","Sep-Nov,Feb-Mar","Aug-Nov,Feb-Mar","Aug-Nov,Feb-Mar",Mar-Oct,,4,30-40,30-40,H,R/D,6-12,30-60
+Rosella,Vegetable,Nov-Dec,Nov-Dec,Sep-Dec,Sep-Dec,Sep-Mar,Jan-Dec,10-15,90-100,40-50,FT,R,10-20,180-200
+Silverbeet,Vegetable,Sep-Apr,Sep-Apr,Sep-May,Sep-May,Jan-Dec,Mar-Sep,10,60,20-35,H,R/D,10-20,50-90
+Spinach,Vegetable,Feb-Nov,Feb-Nov,Feb-Sep,Feb-Sep,Mar-Jul,Apr-Jun,8,40-50,25-35,H,D,10-25,50-70
+Squash,Vegetable,Sep-Dec,Sep-Dec,Sep-Jan,Sep-Jan,Aug-Feb,Feb-Nov,15-25,90-100,60-100,FT,D,6-18,50-90
+Swede,Vegetable,"Sep-Nov,Jan-Apr","Sep-Nov,Jan-Apr",Jan-Apr,Jan-Apr,Jan-May,Feb-Apr,10,30-50,10-20,H,D,6-12,70-90
+Tomato,Vegetable,Sep-Dec,Sep-Dec,Aug-Dec,Aug-Dec,Aug-Mar,Feb-Jul,5,50-70,40-60,FT,R/D,10-20,80-120
+Turnip,Vegetable,Sep-May,Sep-May,Sep-May,Sep-May,Aug-May,Mar-Jun,10,20-40,7-15,H,D,6-12,50-90
+Watermelon,Vegetable,Sep-Dec,Sep-Dec,Aug-Dec,Aug-Dec,Aug-Jan,Feb-Nov,15-20,150-180,60-80,FT,D,6-18,70-120
+Zucchini,Vegetable,Sep-Dec,Sep-Dec,Sep-Jan,Sep-Jan,Aug-Feb,Feb-Sep,15-20,80-120,50-80,FT,D,6-12,50-100
+Anise,Herb,Sep-Feb,Sep-Feb,Sep-Feb,Sep-Feb,Sep-Feb,Sep-Feb,6,,30,HH,R,7-14,
+Basil,Herb,Sep-Feb,Sep-Feb,Sep-Dec,Sep-Dec,Aug-Feb,Jan-Dec,3,,25-40,FT,R/D,7-14,
+Bergamot,Herb,Oct-Mar,Oct-Mar,Sep-Apr,Sep-Apr,Apr-Sep,Apr-Sep,3,,30,H,R,7-21,
+Borage,Herb,Sep-Jan,Sep-Jan,Aug-Feb,Aug-Feb,Feb-Nov,Apr-Sep,10,,30,H,R/D,14-21,
+Burnet,Herb,Sep-Apr,Sep-Apr,"Mar-Apr,Oct-Dec","Mar-Apr,Oct-Dec",Feb-Oct,Mar-Sep,8,,30,H,R/D,14-28,
+Caraway,Herb,"Feb-Apr,Sep-Nov","Feb-Apr,Sep-Nov","Mar-May,Aug-Nov","Mar-May,Aug-Nov",Feb-Nov,Mar-Oct,10,,25,H,D,10-20,
+Catnip,Herb,Oct-Mar,Oct-Mar,Sep-Apr,Sep-Apr,Apr-Sep,Apr-Sep,5,,60,H,R,7-21,
+Chamomile,Herb,Sep-Dec,Sep-Dec,Jul-Nov,Jul-Nov,Mar-Oct,Aug-Sep,1,,10-40,H,R/D,14-21,
+Chervil,Herb,Sep-Mar,Sep-Mar,Aug-Apr,Aug-Apr,Mar-Sep,Aug-Sep,6-10,,30,H,D,14-21,
+Chives,Herb,Oct-Mar,Oct-Mar,Sep-Mar,Sep-Mar,Jan-Dec,Jan-Dec,5,,3-20,H,D,14-21,
+Coriander,Herb,Sep-Dec,Sep-Dec,"Mar-Apr,Aug-Nov","Mar-Apr,Aug-Nov",Mar-Oct,Mar-Oct,6,,20,H,D,14-21,
+Cress,Herb,Jan-Dec,Jan-Dec,Jan-Dec,Jan-Dec,Jan-Dec,Jan-Dec,4,,15,H,D,6-12,
+Cumin,Herb,Sep-Nov,Sep-Nov,Sep-Nov,Sep-Nov,Sep-Nov,Sep-Nov,5,,20,HH,D/R,5-14,
+Dill,Herb,Sep-Jan,Sep-Jan,Aug-Apr,Aug-Apr,Mar-Oct,Apr-Sep,2-4,,20,H,D,14-21,
+Echinacea,Herb,Sep-Dec,Sep-Dec,Sep-Jan,Sep-Jan,"Sep-Nov,Mar-May","Sep-Nov,Mar-May",6,,50,H,R/D,14-28,
+Evening Primrose,Herb,Oct-Apr,Oct-Apr,Sep-Apr,Sep-Apr,Apr-Sep,Apr-Sep,1,,30,H,R,21-28,
+Fenugreek,Herb,Mar-Nov,Mar-Nov,Mar-Nov,Mar-Nov,Mar-Nov,Mar-Nov,10,,40,H,D,4-14,
+Hyssop,Herb,Sep-Feb,Sep-Feb,Sep-Feb,Sep-Feb,Sep-Feb,Sep-Feb,6,,40-60,H,R,5-15,
+Lemon Balm,Herb,Sep-Dec,Sep-Dec,"Mar-Apr,Sep-Dec","Mar-Apr,Sep-Dec",Mar-Oct,Apr-Oct,3,,50,H,R,7-28,
+Lovage,Herb,Sep-Feb,Sep-Feb,Sep-Feb,Sep-Feb,Sep-Feb,Sep-Feb,6,,100,H,R/D,10-20,
+Marjoram,Herb,Sep-Dec,Sep-Dec,"Mar-Apr,Sep-Nov","Mar-Apr,Sep-Nov",Feb-Oct,Mar-Sep,5,,50,FT,R/D,10-28,
+Mint,Herb,Sep-Dec,Sep-Dec,Aug-Dec,Aug-Dec,Aug-Nov,Apr-Jul,2,,30-50,H,R,7-21,
+Nasturtuim,Herb,Sep-Dec,Sep-Dec,Aug-Feb,Aug-Feb,Feb-Sep,Feb-Sep,10-15,,30-45,FT,R/D,14-21,
+Oregano,Herb,Sep-Dec,Sep-Dec,"Aug-Dec,Mar-Apr","Aug-Dec,Mar-Apr",Mar-Oct,Apr-Sep,5,,50,H,R/D,10-28,
+Parsley,Herb,Sep-Mar,Sep-Mar,Aug-Mar,Aug-Mar,Mar-Sep,May-Jul,4,,"30",30-40,R/D,14-28,
+Rosemary,Herb,"Sep-Nov,Mar-May","Sep-Nov,Mar-May","Sep-Nov,Mar-May","Sep-Nov,Mar-May","Sep-Nov,Mar-May","Sep-Nov,Mar-May",3,,150,H,R,14-28,
+Rue,Herb,Sep-Nov,Sep-Nov,Sep-Nov,Sep-Nov,Sep-Nov,Sep-Nov,5,,50,H,R,7-14,
+Sage,Herb,Sep-Nov Sep-Jan Jan-Dec Jan-Dec,Sep-Nov Sep-Jan Jan-Dec Jan-Dec,Sep-Nov Sep-Jan Jan-Dec Jan-Dec,Sep-Nov Sep-Jan Jan-Dec Jan-Dec,Sep-Nov Sep-Jan Jan-Dec Jan-Dec,Sep-Nov Sep-Jan Jan-Dec Jan-Dec,5,,30-50,H,R/D,7-21,
+Savory,Herb,Sep-Nov,Sep-Nov,Sep-Nov,Sep-Nov,Sep-Nov,Sep-Nov,3,,40,H,R,7-21,
+Sorrel,Herb,"Mar-May,Sep-Nov","Mar-May,Sep-Nov","Mar-May,Sep-Nov","Mar-May,Sep-Nov","Mar-May,Sep-Nov","Mar-May,Sep-Nov",5,,30-50,H,R,14-21,
+Tarragon,Herb,Sep-Nov,Sep-Nov,Sep-Nov,Sep-Nov,Sep-Nov,Sep-Nov,1,,50,HH,R,10-28,
+Thyme,Herb,Sep-Dec,Sep-Dec,"Mar-Apr,Sep-Dec","Mar-Apr,Sep-Dec",Mar-Oct,Mar-Sep,3,,30,H,R/D,7-14,
+Wormwood,Herb,"Mar-May,Sep-Nov","Mar-May,Sep-Nov","Mar-May,Sep-Nov","Mar-May,Sep-Nov","Mar-May,Sep-Nov","Mar-May,Sep-Nov",0,,60,H,R,10-28,
+Yarrow,Herb,Sep-Nov,Sep-Nov,Sep-Nov,Sep-Nov,Sep-Nov,Sep-Nov,1,,60,H,R,10-10,
+Alyssum,Flower,Sep-Apr,Sep-Apr,Aug-May,Aug-May,Feb-Jul,Mar-Jul,3,,8-15,H,R/D,5-21,55-65
+Amaranth,Flower,Sep-Nov,Sep-Nov,Aug-Mar,Aug-Mar,Aug-Apr,Mar-Aug,5,,30-40,HH,D,5-20,100
+Aquilegia,Flower,"Feb-Apr,Sep-Oct","Feb-Apr,Sep-Oct",Feb-May,Feb-May,Mar-Jun,Feb-May,3,,30-40,H,R,14-28,190-220
+Aster,Flower,Sep-Dec,Sep-Dec,Aug-Dec,Aug-Dec,Jul-Jan,Jul-Jan,5,,20-30,HH,R,14-28,100-110
+Brachycome,Flower,Sep-Dec,Sep-Dec,Aug-Dec,Aug-Dec,May-Jul,May-Aug,3,,15-20,HH,R/D,10-20,110-130
+Calendula,Flower,"Feb-Apr,Sep-Nov","Feb-Apr,Sep-Nov",Feb-May,Feb-May,Mar-Jun,"Mar-May,Aug-Oct",10-15,,30,H,R/D,14-21,70-85
+Californian Poppy,Flower,Sep-Jan,Sep-Jan,Aug-Dec,Aug-Dec,Jun-Nov,Jun-Nov,3,,25-35,H,R/D,14-21,50-70
+Candytuft,Flower,"Feb-Apr,Sep-Nov","Feb-Apr,Sep-Nov",Feb-Jun,Feb-Jun,Mar-Jul,Mar-Jun,5,,25,H,R/D,14-21,80-100
+Canterbury Bells,Flower,Feb-Apr,Feb-Apr,Feb-Jun,Feb-Jun,Mar-Jul,Mar-Jul,3,,30,H,R,7-28,140-160
+Carnation,Flower,"Feb-May,Aug-Oct","Feb-May,Aug-Oct","Mar-May,Aug-Oct","Mar-May,Aug-Oct",Apr-Oct,Apr-Oct,6,,30-40,H,R,10-20,200
+Cosmos,Flower,Sep-Dec,Sep-Dec,Aug-Dec,Aug-Dec,Jul-Oct,Jul-Oct,10-15,,50,HH,R/D,,80-100
+Dahlia,Flower,Sep-Dec,Sep-Dec,Sep-Dec,Sep-Dec,Jun-Oct,Jun-Sep,10-15,,50-100,FT,R,7-21,110-130
+Dianthus,Flower,"Feb-Apr,Sep-Nov","Feb-Apr,Sep-Nov",Feb-Nov,Feb-Nov,Feb-Oct,Mar-Oct,3,,20,H,D,10-20,140
+Forget Me Not,Flower,Dec-Apr,Dec-Apr,Jan-May,Jan-May,Mar-May,Mar-May,3,,30,H,D,7-14,80-90
+Four 'O' Clocks,Flower,Sep-Nov,Sep-Nov,Sep-Dec,Sep-Dec,Feb-Sep,Mar-Sep,10-15,,50-70,FT,R/D,14-28,
+Foxglove,Flower,Feb-Apr,Feb-Apr,Feb-May,Feb-May,Mar-May,Mar-May,3,,30-40,H,D,14-35,120-130
+Godetia,Flower,"Feb-Apr,Sep-Oct","Feb-Apr,Sep-Oct",Feb-Jun,Feb-Jun,Mar-Jun,Mar-Jun,5,,30,H,R/D,14-28,80-100
+Gypsophila,Flower,Aug-May,Aug-May,Feb-Nov,Feb-Nov,Mar-Jun,Mar-Jun,5,,20-30,H,D,10-20,70-80
+Hollyhock,Flower,Jan-Apr,Jan-Apr,Feb-May,Feb-May,Mar-Jul,Mar-Jun,8,,30-50,H,R,6-20,200-220
+Honesty,Flower,"Feb-Apr,Sep-Nov","Feb-Apr,Sep-Nov","Feb-May,Aug-Oct","Feb-May,Aug-Oct",Mar-Sep,Mar-Sep,6,,30-50,H,R,21-35,80-100
+Impatiens,Flower,"Feb-Apr,Sep-Oct","Feb-Apr,Sep-Oct","Feb-May,Aug-Oct","Feb-May,Aug-Oct",Jan-Dec,Jan-Dec,5,,30-40,FT,R,14-21,80-100
+Larkspur,Flower,"Feb-Apr,Sep-Oct","Feb-Apr,Sep-Oct",Feb-Jun,Feb-Jun,Apr-Jun,Apr-Jun,3,,30-40,H,D,10-21,140
+Lavender,Flower,Sep-Nov,Sep-Nov,Sep-Nov,Sep-Nov,Sep-Nov,Sep-Nov,3,,50-70,H,R,18-28,365
+Linaria,Flower,"Feb-Apr,Sep-Nov","Feb-Apr,Sep-Nov",Jan-May,Jan-May,Feb-Jun,Feb-Jun,3,,10-20,H,D,14-28,70
+Livingstone Daisy,Flower,"Feb-Apr,Sep-Oct","Feb-Apr,Sep-Oct",Feb-May,Feb-May,Feb-May,Feb-May,3,,15,HH,R/D,14-28,140
+Lobelia,Flower,"Feb-Apr,Sep-Oct","Feb-Apr,Sep-Oct",Feb-May,Feb-May,Feb-May,Feb-May,1,,15,HH,R,,100-120
+Marigold - African,Flower,Sep-Dec,Sep-Dec,Jul-Dec,Jul-Dec,Jul-Feb,Jul-Feb,8-12,,20-40,FT,R/D,14-28,80-90
+Nasturtium,Flower,Sep-Dec,Sep-Dec,Aug-Feb,Aug-Feb,Feb-Sep,Feb-Sep,10-15,,20-40,FT,D,14-21,70-80
+Nigella,Flower,"Feb-Apr,Sep-Oct","Feb-Apr,Sep-Oct",Feb-May,Feb-May,Feb-Jun,Feb-Jun,3,,20-30,H,R/D,7-20,100
+Pansy,Flower,"Jan-Apr,Sep-Oct","Jan-Apr,Sep-Oct",Jan-May,Jan-May,Feb-May,Feb-May,6,,25,H,R,10-20,110-120
+Petunia,Flower,Sep-Dec,Sep-Dec,Aug-Dec,Aug-Dec,May-Sep,Mar-Sep,3,,25-40,HH,R,7-14,80-90
+Phlox,Flower,Sep-Dec,Sep-Dec,Aug-Dec,Aug-Dec,May-Sep,Mar-Sep,3,,10-15,H,R/D,10-20,70
+Poppy,Flower,Feb-Apr,Feb-Apr,Feb-Mar,Feb-Mar,Feb-Mar,Feb-Mar,3,,20-30,H,D,14-28,140-150
+Snapdragon,Flower,"Feb-Apr,Sep-Dec","Feb-Apr,Sep-Dec","Feb-May,Aug-Oct","Feb-May,Aug-Oct",Feb-Sep,Feb-Sep,3,,30-40,H,R,14-28,110-120
+Statice,Flower,"Feb-Apr,Sep-Oct","Feb-Apr,Sep-Oct",Feb-Sep,Feb-Sep,Mar-Jul,Mar-Jul,3,,40,H,D,14-28,140
+Stock,Flower,Jan-Apr,Jan-Apr,Jan-May,Jan-May,Feb-Jun,Feb-Jun,3,,20-40,H,R,10-20,140
+"Stock,Virginian",Flower,"Feb-Apr,Sep-Nov","Feb-Apr,Sep-Nov","Feb-May,Sep-Oct","Feb-May,Sep-Oct",Feb-Apr,Feb-Apr,6,,20,H,R/D,10-20,100-120
+Sunflower,Flower,Sep-Dec,Sep-Dec,Aug-Dec,Aug-Dec,Aug-May,Jan-Dec,8-12,,20-60,H,R/D,6-21,80-100
+Sweetpea,Flower,"Jan-Apr,Sep-Oct","Jan-Apr,Sep-Oct",Jan-May,Jan-May,Mar-May,Feb-May,10-20,,5-10,H,D,7-21,100
+Verbena,Flower,Sep-Jan,Sep-Jan,Aug-Feb,Aug-Feb,Feb-Sep,Feb-Sep,6,,25-30,H,R/D,10-20,70
+Viola,Flower,"Jan-Mar,Sep","Jan-Mar,Sep",Jan-May,Jan-May,Feb-May,Feb-May,6,,20,H,R,10-20,110-130
+Wallflower,Flower,Jan-Apr,Jan-Apr,Jan-May,Jan-May,Feb-May,Feb-May,6,,20-30,H,R,14-21,180
+Zinnia,Flower,Sep-Dec,Sep-Dec,Aug-Dec,Aug-Dec,Jul-Feb,Jan-Dec,6,,20-40,HH,R/D,6-21,100

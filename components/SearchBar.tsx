@@ -4,10 +4,11 @@ import _ from 'lodash'
 import throttle from 'lodash/throttle';
 
 import React, { useState, useRef, useEffect, useMemo } from 'react'
-import { Grid, Container, Paper, TextField, WithStyles, createStyles, Divider } from '@material-ui/core';
-import { withStyles, Theme } from '@material-ui/core/styles';
-import useAutocomplete from '@material-ui/lab/useAutocomplete';
-import SearchIcon from '@material-ui/icons/Search';
+import { Grid, Container, Paper, TextField, Divider } from '@mui/material';
+import { Theme } from '@mui/material/styles';
+import { withStyles, createStyles, WithStyles } from '@mui/styles';
+import useAutocomplete from '@mui/lab/useAutocomplete';
+import SearchIcon from '@mui/icons-material/Search';
 
 import SearchBarCollections from './SearchBarCollections'
 import SearBarOption from './SearchBarOption'

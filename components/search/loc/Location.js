@@ -1,6 +1,6 @@
 import { useContext } from 'react'
-import { makeStyles } from '@material-ui/core/styles'
-import { Divider, Typography } from '@material-ui/core'
+import { makeStyles } from '@mui/styles';
+import { Divider, Typography } from '@mui/material'
 
 import LocZone from './LocZone'
 import Historical from './Historical'
@@ -15,7 +15,12 @@ const useStyles = makeStyles((theme) => ({
     margin: theme.spacing(3, 0, 7)
   },
   section: {
-    ...theme.mixins.gutters()
+    paddingLeft: theme.spacing(2),
+    paddingRight: theme.spacing(2),
+    [theme.breakpoints.up('sm')]: {
+      paddingLeft: theme.spacing(3),
+      paddingRight: theme.spacing(3),
+    },
   },
   title: {
     marginBottom: theme.spacing(4)
@@ -53,10 +58,10 @@ export default function Location() {
       <Divider className={classes.divider} />
     </section>
 
-      <section className={classes.section}>
-        <Typography variant="h6" className={classes.title} children={'Soil'} />
-        <Soil />
-      </section>
+    <section className={classes.section}>
+      <Typography variant="h6" className={classes.title} children={'Soil'} />
+      <Soil />
+    </section>
 
   </>
 }

@@ -3,26 +3,30 @@ import useSWR from 'swr'
 
 import { useState, useContext, useEffect } from 'react'
 import {
-  Typography, Fab, Container, WithStyles, createStyles, TextField, Paper, Avatar,
-  Dialog, DialogTitle, DialogContent, DialogActions, Button, IconButton, Divider
-} from '@material-ui/core'
-import { withStyles, Theme } from '@material-ui/core/styles';
-import AddIcon from '@material-ui/icons/Add';
-import CloseIcon from '@material-ui/icons/Close';
+  Typography, Fab, Container, TextField, Paper, Avatar,
+  Dialog, DialogTitle, DialogContent, DialogActions, Button, IconButton, Divider,
+  Theme
+} from '@mui/material'
+import { withStyles, createStyles, WithStyles } from '@mui/styles';
+import AddIcon from '@mui/icons-material/Add';
+import CloseIcon from '@mui/icons-material/Close';
 import DateFnsUtils from '@date-io/date-fns';
-import { MuiPickersUtilsProvider, KeyboardDatePicker } from '@material-ui/pickers';
-import Autocomplete from '@material-ui/lab/Autocomplete';
-import Timeline from '@material-ui/lab/Timeline';
-import TimelineItem from '@material-ui/lab/TimelineItem';
-import TimelineSeparator from '@material-ui/lab/TimelineSeparator';
-import TimelineConnector from '@material-ui/lab/TimelineConnector';
-import TimelineContent from '@material-ui/lab/TimelineContent';
-import TimelineOppositeContent from '@material-ui/lab/TimelineOppositeContent';
-import TimelineDot from '@material-ui/lab/TimelineDot';
+import AdapterDateFns from '@mui/lab/AdapterDateFns';
+import LocalizationProvider from '@mui/lab/LocalizationProvider';
+import DatePicker from '@mui/lab/DatePicker';
+import Autocomplete from '@mui/lab/Autocomplete';
+import Timeline from '@mui/lab/Timeline';
+import TimelineItem from '@mui/lab/TimelineItem';
+import TimelineSeparator from '@mui/lab/TimelineSeparator';
+import TimelineConnector from '@mui/lab/TimelineConnector';
+import TimelineContent from '@mui/lab/TimelineContent';
+import TimelineOppositeContent from '@mui/lab/TimelineOppositeContent';
+import TimelineDot from '@mui/lab/TimelineDot';
 
 import AppContext from '../lib/contexts'
 import { fetchers } from '../lib/apiFetchers'
-import firebase from '../lib/firebaseApp'
+import { firebase } from '../lib/firebaseApp'
+import { DocumentData, addDoc, collection, getDocs } from 'firebase/firestore'
 
 const styles = (theme: Theme) => createStyles({
   root: {
@@ -124,12 +128,20 @@ function Journal(props: Props) {
   }, [])
 
   useEffect(() => {
-    const db = firebase.firestore();
-    db.collection("note").get()
-      .then(snap => snap.docs)
-      .then(docs => docs.map(doc => doc.data()))
-      .then(noteDatas => noteDatas.sort((a, b) => b.date - a.date))
-      .then(noteDatas => setNotes(noteDatas))
+    async function fetchNotes() {
+      const db = firebase.db;
+      const snap = await getDocs(collection(db, "note"))
+
+      const noteDatas: DocumentData[] = []
+      snap.forEach((doc) => {
+        noteDatas.push(doc.data())
+      })
+
+      const sortedNotes = noteDatas.sort((a, b) => b.date - a.date)
+
+      setNotes(sortedNotes)
+    };
+    fetchNotes();
   }, [])
 
   const actionIcons = () => {
@@ -144,18 +156,16 @@ function Journal(props: Props) {
     })
   }
 
-  const handleAdd = () => {
-    const db = firebase.firestore();
-    db.collection("note").add({
+  const handleAdd = async () => {
+    const db = firebase.db;
+    await addDoc(collection(db, "note"), {
       date: selectedDate,
       note: note,
       plant: plant,
-      action: action,
-      uid: "TODO"
+      action: action
     })
-      .then(() => {
-        setOpen(false)
-      })
+
+    setOpen(false)
   };
 
   const handleClose = () => {
@@ -185,8 +195,8 @@ function Journal(props: Props) {
 
         <Divider />
         <DialogContent >
-          <MuiPickersUtilsProvider utils={DateFnsUtils}>
-            <KeyboardDatePicker
+          <LocalizationProvider dateAdapter={AdapterDateFns} utils={DateFnsUtils}>
+            <DatePicker
               disableToolbar
               variant="inline"
               format="MM/dd/yyyy"
@@ -199,7 +209,7 @@ function Journal(props: Props) {
                 'aria-label': 'change date',
               }}
             />
-          </MuiPickersUtilsProvider>
+          </LocalizationProvider>
 
           <Autocomplete
             freeSolo

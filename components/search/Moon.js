@@ -7,10 +7,10 @@ import { useState, useContext } from 'react'
 import {
   Popover, Typography, IconButton, Grid, Avatar, List, ListItem, ListItemText, ListItemIcon,
   ExpansionPanel, ExpansionPanelSummary, ExpansionPanelDetails
-} from '@material-ui/core';
-import { makeStyles } from '@material-ui/core/styles';
-import EcoIcon from '@material-ui/icons/Eco';
-import CloseIcon from '@material-ui/icons/Close';
+} from '@mui/material';
+import { makeStyles } from '@mui/styles';
+import Spa from '@mui/icons-material/Spa';
+import Close from '@mui/icons-material/Close';
 
 import { weekdayNames, moonActions } from '../../lib/utils'
 import AppContext from '../../lib/contexts'
@@ -29,7 +29,12 @@ const useStyles = makeStyles((theme) => ({
     height: theme.spacing(8),
   },
   title: {
-    ...theme.mixins.gutters(),
+    paddingLeft: theme.spacing(2),
+    paddingRight: theme.spacing(2),
+    [theme.breakpoints.up('sm')]: {
+      paddingLeft: theme.spacing(3),
+      paddingRight: theme.spacing(3),
+    },
     margin: theme.spacing(2, 'auto')
 
   },
@@ -76,7 +81,7 @@ const fcDateDetailEl = (actions) => {
     items.push(
       <ListItem key={thing} disableGutters dense>
         <ListItemIcon>
-          <EcoIcon color="secondary" />
+          <Spa color="secondary" />
         </ListItemIcon>
         <ListItemText primary={thing} />
       </ListItem>
@@ -167,7 +172,7 @@ export default function Moon({ ds }) {
       }
 
       <IconButton aria-label="close" className={classes.closeButton} onClick={handleClose}>
-        <CloseIcon />
+        <Close />
       </IconButton>
     </Popover>
   </>

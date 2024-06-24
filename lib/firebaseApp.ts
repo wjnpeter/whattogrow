@@ -1,10 +1,9 @@
-import firebase from 'firebase/app'
-import 'firebase/auth' 
-import 'firebase/firestore' 
-// import 'firebase/storage' 
-import 'firebase/analytics' 
+import { initializeApp } from "firebase/app";
+import { getAnalytics, initializeAnalytics } from "firebase/analytics";
+import { getAuth } from 'firebase/auth'
+import { getFirestore } from 'firebase/firestore'
 
-const clientCredentials = {
+const firebaseConfig = {
   apiKey: process.env.FIREBASE_API_KEY,
   authDomain: process.env.FIREBASE_AUTH_DOMAIN,
   databaseURL: process.env.FIREBASE_DATABASE_URL,
@@ -15,11 +14,9 @@ const clientCredentials = {
   measurementId: process.env.FIREBASE_MEASUREMENT_ID,
 }
 
-// Check that `window` is in scope for the analytics module!
-if (typeof window !== 'undefined' && !firebase.apps.length) {
-  firebase.initializeApp(clientCredentials)
-  
-  if ('measurementId' in clientCredentials) firebase.analytics()
-}
+const fb = initializeApp(firebaseConfig);
+const db = getFirestore(fb);
 
-export default firebase
+export const firebase = {
+  db: db
+}

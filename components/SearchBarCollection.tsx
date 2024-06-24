@@ -5,9 +5,10 @@ import qs from 'qs'
 
 import React, { useState, useEffect, useContext } from 'react'
 import {
-  Grid, Typography, ButtonBase, Card, WithStyles, createStyles, Divider, Avatar
-} from '@material-ui/core'
-import { withStyles, Theme } from '@material-ui/core/styles';
+  Grid, Typography, ButtonBase, Card, Divider, Avatar
+} from '@mui/material'
+import { Theme } from '@mui/material/styles';
+import { withStyles, createStyles, WithStyles } from '@mui/styles';
 
 import { fetchers } from '../lib/apiFetchers'
 import { ApiSeedFilter } from '../lib/api/interfaces'
@@ -59,7 +60,10 @@ function SearchBarCollection(props: Props) {
 
   const c = props.collection
 
-  const { data: tempZone } = useSWR([c.latlon, 'temperature', appContext.token], fetchers.zone)
+  const { data: tempZone } = useSWR(
+    [c.latlon, 'temperature', appContext.token], 
+    ([geo, about, token]) => fetchers.zone(geo, about, token)
+  )
 
   const filter: ApiSeedFilter = {
     month: new Date().getMonth(),
@@ -67,7 +71,10 @@ function SearchBarCollection(props: Props) {
     category: c.category
   }
 
-  const { data: plants } = useSWR(!_.isNil(tempZone) ? [qs.stringify(filter), appContext.token] : null, fetchers.seeds)
+  const { data: plants } = useSWR(
+    !_.isNil(tempZone) ? [qs.stringify(filter), appContext.token] : null, 
+    ([filter, token]) => fetchers.seeds(filter, token)
+  )
   
   useEffect(() => {
     if (plants) {
@@ -92,7 +99,7 @@ function SearchBarCollection(props: Props) {
   }
 
   let imgSrc = null
-  if (!_.isNil(plants) && !_.isEmpty(plants.data)) {
+  if (!_.isNil(plants) && !_.isEmpty(plants.data) && !_.isUndefined(plants.data[0].wiki.thumbnail)) {
     imgSrc = plants.data[0].wiki.thumbnail.source
   } else {
     imgSrc = 'images/category/' + c.category + '.jpg'

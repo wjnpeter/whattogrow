@@ -4,8 +4,8 @@ import _ from 'lodash'
 import InfiniteScroll from 'react-infinite-scroller';
 
 import { useContext, useEffect, useState } from 'react';
-import { GridList } from '@material-ui/core'
-import { makeStyles } from '@material-ui/core/styles';
+import ImageList from '@mui/material/ImageList';
+import { makeStyles } from '@mui/styles';
 
 import PlantPage from './PlantPage'
 import AppContext from '../../lib/contexts'
@@ -20,7 +20,7 @@ const useStyles = makeStyles((theme) => ({
 
 export default function Plants(props) {
   const classes = useStyles();
-  const appContext = useContext(AppContext) 
+  const appContext = useContext(AppContext)
   const [pages, setPages] = useState(0)
 
   // : ApiSeedFilter
@@ -30,8 +30,11 @@ export default function Plants(props) {
     ids: props.ids,
     page: 0,
   }
-  
-  const { data: plants } = useSWR([qs.stringify(filter), appContext.token], fetchers.seeds)
+
+  const { data: plants } = useSWR(
+    [qs.stringify(filter), appContext.token],
+    ([filter, token]) => fetchers.seeds(filter, token)
+  )
 
   let plantPages = []
   for (let p = 0; p <= pages; ++p) {
@@ -46,9 +49,9 @@ export default function Plants(props) {
         loadMore={p => setPages(p)}
         hasMore={plants ? pages < plants.pageCount - 1 : false}
       >
-        <GridList cellHeight={284} className={classes.gridList} cols={4}>
+        <ImageList rowHeight={360} className={classes.gridList} cols={4}>
           {plantPages}
-        </GridList>
+        </ImageList>
       </InfiniteScroll>
     </div>
   );

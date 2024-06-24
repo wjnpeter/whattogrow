@@ -2,7 +2,7 @@ import useSWR from 'swr'
 import axios from 'axios'
 
 import { useContext } from 'react'
-import Typography from '@material-ui/core/Typography';
+import Typography from '@mui/material/Typography';
 
 import AppContext from '../../../lib/contexts'
 import { fetchers } from '../../../lib/apiFetchers'
@@ -12,7 +12,10 @@ import { fetchers } from '../../../lib/apiFetchers'
 export default function LocZone() {
   const appContext = useContext(AppContext)
 
-  const { data: koppen } = useSWR([appContext.geo, 'koppenmajor', appContext.token], fetchers.zone)
+  const { data: koppen } = useSWR(
+    [appContext.geo, 'koppenmajor', appContext.token], 
+    ([geo, about, token]) => fetchers.zone(geo, about, token)
+  )
 
   const addr = appContext.addr
   if (!addr) return <></>

@@ -1,5 +1,5 @@
 import React from 'react'
-import { LinearProgress, Grid, Container } from '@material-ui/core'
+import { LinearProgress, Grid, Container } from '@mui/material'
 
 export default function LoadingPage() {
   return <>

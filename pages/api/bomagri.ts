@@ -42,7 +42,6 @@ async function handler(req: NextApiRequest, res: NextApiResponse) {
 
   const state = await getState(geo as string)
   log('Get state for: ' + geo + ' is ' + state)
-
   const [foundStation, foundAgri] = await getAgri(station as string, state)
 
   const apiAgri: ApiAgri = new ApiAgri()

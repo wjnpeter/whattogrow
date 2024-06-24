@@ -1,11 +1,13 @@
 import _ from 'lodash'
 
+import React from 'react'
 import {
   Dialog, DialogTitle, DialogContent, IconButton,
-  Grid, Slide, Typography, Divider, makeStyles
-} from '@material-ui/core';
+  Grid, Slide, Typography, Divider
+} from '@mui/material';
+import { makeStyles } from '@mui/styles';
 import { useContext } from 'react'
-import CloseIcon from '@material-ui/icons/Close';
+import CloseIcon from '@mui/icons-material/Close';
 
 import PlantRate from './PlantRate'
 import AppContext from '../../lib/contexts'

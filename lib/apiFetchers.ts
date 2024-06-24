@@ -4,7 +4,7 @@ import qs from 'qs'
 import _ from 'lodash'
 import { ApiZone, ApiSeedFilter } from './api/interfaces'
 
-async function bomstn(geo: string, product: string, token: string) {
+async function bomstn(geo: string | undefined, product: string, token: string) {
   return axios.get('/api/bomstn', {
     params: { geo, product },
     headers: {
@@ -13,7 +13,7 @@ async function bomstn(geo: string, product: string, token: string) {
   }).then(res => res.data)
 }
 
-async function bomagri(geo: string, station: string, token: string) {
+async function bomagri(geo: string | undefined, station: string, token: string) {
   return axios.get('api/bomagri', {
     params: { geo, station },
     headers: {
@@ -34,15 +34,6 @@ async function bomstat(station: string, product: string, token: string) {
 async function zone(geo: string, about: string, token: string) {
   return axios.get('/api/zone', {
     params: { geo, about },
-    headers: {
-      'Authorization': `Bearer ${token}`
-    }
-  }).then(res => res.data)
-}
-
-async function ds(geo: string, token: string) {
-  return axios.get('/api/ds', {
-    params: { geo },
     headers: {
       'Authorization': `Bearer ${token}`
     }
@@ -90,7 +81,6 @@ export const fetchers = {
   bomagri: bomagri,
   bomstat: bomstat,
   zone: zone,
-  ds: ds,
   moon: moon,
   gGeocoder: gGeocoder,
   seeds: seeds

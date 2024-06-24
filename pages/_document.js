@@ -1,6 +1,6 @@
 import React from 'react';
 import Document, { Html, Head, Main, NextScript } from 'next/document';
-import { ServerStyleSheets } from '@material-ui/core/styles';
+import { ServerStyleSheets } from '@mui/styles';
 import { theme } from '../styles/theme';
 
 export default class MyDocument extends Document {  
@@ -14,7 +14,6 @@ export default class MyDocument extends Document {
             rel="stylesheet"
             href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
           />
-          <meta name="viewport" content="initial-scale=1.0, width=device-width" />
           <link rel="shortcut icon" href="images/favicon.ico" />
           <script type="text/javascript"
             src={'https://maps.googleapis.com/maps/api/js?libraries=places&key=' + process.env.GOOGLE_API_KEY}>

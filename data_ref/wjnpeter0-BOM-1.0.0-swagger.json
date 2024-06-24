@@ -1,0 +1,283 @@
+{
+  "openapi" : "3.0.0",
+  "servers" : [ {
+    "description" : "SwaggerHub API Auto Mocking",
+    "url" : "https://virtserver.swaggerhub.com/wjnpeter0/BOM/1.0.0"
+  }, {
+    "description" : "SwaggerHub API Auto Mocking",
+    "url" : "https://www.seedhunt.com/api"
+  } ],
+  "info" : {
+    "description" : "Get info. base on BOM weather.",
+    "version" : "1.0.0",
+    "title" : "BOM",
+    "contact" : {
+      "email" : "wytheingz@gmail.com",
+      "name" : "wjnpeter"
+    },
+    "license" : {
+      "name" : "Apache 2.0",
+      "url" : "http://www.apache.org/licenses/LICENSE-2.0.html"
+    }
+  },
+  "paths" : {
+    "/bom/stn" : {
+      "get" : {
+        "operationId" : "getBOMStation",
+        "summary" : "Get the nearest station",
+        "description" : "If **product code** provided, it will return the station based on this product. Similar function as [here](http://www.bom.gov.au/climate/cdo/about/sitedata.shtml). Sation is guarantee opening.  If **product code** not provided, the station wil base on [here - Observations](http://www.bom.gov.au/catalogue/data-feeds.shtml#automated)",
+        "parameters" : [ {
+          "in" : "query",
+          "name" : "geo",
+          "description" : "The latitude/longitude of locations. Represent as decimal degree.",
+          "required" : true,
+          "schema" : {
+            "type" : "string"
+          }
+        }, {
+          "in" : "query",
+          "name" : "product",
+          "description" : "The product code from BOM. [Valid codes](ftp://ftp.bom.gov.au/anon2/home/ncc/metadata/lists_by_element/readme.txt)",
+          "schema" : {
+            "$ref" : "#/components/schemas/Product"
+          }
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "OK",
+            "content" : {
+              "application/json" : {
+                "schema" : {
+                  "properties" : {
+                    "data" : {
+                      "$ref" : "#/components/schemas/Station"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "400" : {
+            "description" : "bad input parameter"
+          }
+        },
+        "tags" : [ "BOM" ]
+      }
+    },
+    "/bom/stat" : {
+      "get" : {
+        "operationId" : "getBOMStatistic",
+        "description" : "Get historical statistics for a specific station. [Same function here](http://www.bom.gov.au/climate/data/index.shtml)",
+        "parameters" : [ {
+          "in" : "query",
+          "name" : "station",
+          "description" : "The station id. Represent as 6-digit number. Same as the id return from bomstn. [ID Rule](http://www.bom.gov.au/climate/cdo/about/site-num.shtml)",
+          "required" : true,
+          "schema" : {
+            "type" : "string"
+          }
+        }, {
+          "in" : "query",
+          "name" : "product",
+          "description" : "Available Code:\n\n| | Monthly | Daily|\n|-----|-----|-----|\n| **rainfall** | 139 | 136 |\n| **maxtemperature** | 36 | 122 |\n| **mintemperature** | 38 | 123 |\n",
+          "required" : true,
+          "schema" : {
+            "$ref" : "#/components/schemas/Product"
+          }
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "OK",
+            "content" : {
+              "application/json" : {
+                "schema" : {
+                  "properties" : {
+                    "data" : {
+                      "type" : "object",
+                      "properties" : {
+                        "station" : {
+                          "$ref" : "#/components/schemas/Station"
+                        },
+                        "product" : {
+                          "$ref" : "#/components/schemas/Product"
+                        },
+                        "stats" : {
+                          "$ref" : "#/components/schemas/Stats"
+                        },
+                        "ytd" : {
+                          "$ref" : "#/components/schemas/Stats"
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "400" : {
+            "description" : "bad input parameter"
+          }
+        },
+        "tags" : [ "BOM" ]
+      }
+    },
+    "/bom/agri" : {
+      "get" : {
+        "operationId" : "getBOMAgri",
+        "description" : "Get agricultural bulletins for a specific station. [Section - Agricultural Bulletins](http://www.bom.gov.au/catalogue/data-feeds.shtml#automated)",
+        "parameters" : [ {
+          "in" : "query",
+          "name" : "geo",
+          "description" : "The latitude/longitude of locations. Represent as decimal degree.",
+          "required" : true,
+          "schema" : {
+            "type" : "string"
+          }
+        }, {
+          "in" : "query",
+          "name" : "station",
+          "description" : "The station id. Represent as 6-digit number. Same as the id return from bomstn. [ID Rule](http://www.bom.gov.au/climate/cdo/about/site-num.shtml)",
+          "required" : true,
+          "schema" : {
+            "type" : "string"
+          }
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "OK",
+            "content" : {
+              "application/json" : {
+                "schema" : {
+                  "properties" : {
+                    "data" : {
+                      "type" : "object",
+                      "properties" : {
+                        "station" : {
+                          "$ref" : "#/components/schemas/Station"
+                        },
+                        "agri" : {
+                          "$ref" : "#/components/schemas/Agri"
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "400" : {
+            "description" : "bad input parameter"
+          }
+        },
+        "tags" : [ "BOM" ]
+      }
+    }
+  },
+  "components" : {
+    "schemas" : {
+      "Station" : {
+        "type" : "object",
+        "required" : [ "station" ],
+        "properties" : {
+          "id" : {
+            "type" : "string",
+            "example" : "011017"
+          },
+          "name" : {
+            "type" : "string",
+            "nullable" : true,
+            "example" : "HOBART (ELLERSLIE ROAD)"
+          }
+        }
+      },
+      "Stats" : {
+        "type" : "object",
+        "properties" : {
+          "start" : {
+            "type" : "string",
+            "description" : "start year",
+            "example" : "1970"
+          },
+          "end" : {
+            "type" : "string",
+            "description" : "end year",
+            "example" : "2019"
+          },
+          "annual" : {
+            "type" : "number",
+            "description" : "annual value. unit depends on product",
+            "example" : "560"
+          },
+          "months" : {
+            "type" : "array",
+            "description" : "each value represent the volumn, index represent of each month",
+            "items" : {
+              "type" : "number"
+            }
+          }
+        }
+      },
+      "Agri" : {
+        "type" : "object",
+        "properties" : {
+          "maxTemp" : {
+            "type" : "number",
+            "description" : "maximum temperature, *unit* celsius",
+            "example" : "10"
+          },
+          "minTemp" : {
+            "type" : "number",
+            "description" : "minimum temperature, *unit* celsius",
+            "example" : "24"
+          },
+          "terrTemp" : {
+            "type" : "number",
+            "description" : "terrestrial minimum temperature, *unit* celsius, correspond to code **124**",
+            "example" : "5"
+          },
+          "soilTemp" : {
+            "type" : "object",
+            "description" : "soil temperature, *unit* celsius, , correspond to code **31**",
+            "properties" : {
+              "t5" : {
+                "type" : "number"
+              },
+              "t10" : {
+                "type" : "number"
+              },
+              "t20" : {
+                "type" : "number"
+              },
+              "t50" : {
+                "type" : "number"
+              },
+              "t1m" : {
+                "type" : "number"
+              }
+            }
+          },
+          "sunshine" : {
+            "type" : "number",
+            "description" : "sunshine hours, correspond to code **133**",
+            "example" : "4"
+          },
+          "evaporation" : {
+            "type" : "number",
+            "description" : "millimetres, correspond to code **125**"
+          },
+          "precip" : {
+            "type" : "number",
+            "description" : "millimetres"
+          }
+        }
+      },
+      "Product" : {
+        "type" : "string",
+        "example" : "139"
+      }
+    }
+  },
+  "tags" : [ {
+    "name" : "BOM"
+  } ]
+}

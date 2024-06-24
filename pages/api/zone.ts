@@ -27,7 +27,7 @@ async function handler(req: NextApiRequest, res: NextApiResponse) {
     lat: lat,
     lon: lon
   }
-
+  
   const data = await getClimateclass(params)
 
   res.status(200).json(data)

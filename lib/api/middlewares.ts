@@ -9,6 +9,7 @@ const validateToken = (next: NextHandler) => (req: NextApiRequest, res: NextApiR
   const authHeader = req.headers['authorization'];
 
   let verified = false
+  
   if (typeof authHeader !== 'undefined') {
     const bearer = authHeader.split(' ');
     const token = bearer[1];

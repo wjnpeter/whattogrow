@@ -2,15 +2,21 @@ import parse from 'autosuggest-highlight/parse';
 import _ from 'lodash'
 
 import React, { useState, useRef, useEffect } from 'react'
-import { Typography, WithStyles, createStyles } from '@material-ui/core';
-import { withStyles, Theme } from '@material-ui/core/styles';
-import { makeStyles, useTheme } from '@material-ui/core/styles';
+import { Typography } from '@mui/material';
+import { Theme } from '@mui/material/styles';
+import { makeStyles, useTheme } from '@mui/material/styles';
+import { withStyles, WithStyles, createStyles } from '@mui/styles';
 
 import SearchBarCollections from './SearchBarCollections'
 
 const styles = (theme: Theme) => createStyles({
   root: {
-    ...theme.mixins.gutters(),
+    paddingLeft: theme.spacing(2),
+    paddingRight: theme.spacing(2),
+    [theme.breakpoints.up('sm')]: {
+      paddingLeft: theme.spacing(3),
+      paddingRight: theme.spacing(3),
+    },
     paddingTop: theme.spacing(2),
     paddingBottom: theme.spacing(2),
   }

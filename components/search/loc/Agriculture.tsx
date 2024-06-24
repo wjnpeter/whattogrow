@@ -2,7 +2,7 @@
 import useSWR from 'swr'
 import axios from 'axios'
 import { useContext } from 'react'
-import { Container } from '@material-ui/core';
+import { Container } from '@mui/material';
 
 import AgriCard from './AgriCard'
 import AppContext from '../../../lib/contexts'
@@ -19,16 +19,34 @@ export default function Agriculture() {
 
   const agriData = (res: any) => res && res.data && res.data.agri
 
-  const { data: stationTerrTemp } = useSWR([geo, 124, token], fetchers.bomstn)
-  const { data: agriTerrTemp } = useSWR(() => [geo, stationTerrTemp.data.station.id, token], fetchers.bomagri)
+  const { data: stationTerrTemp } = useSWR(
+    [geo, (124).toString(), token], 
+    ([geo, product, token]) => fetchers.bomstn(geo, product, token)
+  )
+  const { data: agriTerrTemp } = useSWR(
+    () => [geo, stationTerrTemp.data.station.id, token], 
+    ([geo, station, token]) => fetchers.bomagri(geo, station, token)
+  )
   const terrTemp = agriData(agriTerrTemp) ? agriData(agriTerrTemp).terrTemp : null
 
-  const { data: stationSunshine } = useSWR([geo, 133, token], fetchers.bomstn)
-  const { data: agriSunshine } = useSWR(() => [geo, stationSunshine.data.station.id, token], fetchers.bomagri)
+  const { data: stationSunshine } = useSWR(
+    [geo, (133).toString(), token], 
+    ([geo, product, token]) => fetchers.bomstn(geo, product, token)
+  )
+  const { data: agriSunshine } = useSWR(
+    () => [geo, stationSunshine.data.station.id, token], 
+    ([geo, station, token]) => fetchers.bomagri(geo, station, token)
+  )
   const sunshine = agriData(agriSunshine) ? agriData(agriSunshine).sunshine : null
 
-  const { data: stationEvaporation } = useSWR([geo, 125, token], fetchers.bomstn)
-  const { data: agriEvaporation } = useSWR(() => [geo, stationEvaporation.data.station.id, token], fetchers.bomagri)
+  const { data: stationEvaporation } = useSWR(
+    [geo, (125).toString(), token], 
+    ([geo, product, token]) => fetchers.bomstn(geo, product, token)
+  )
+  const { data: agriEvaporation } = useSWR(
+    () => [geo, stationEvaporation.data.station.id, token], 
+    ([geo, station, token]) => fetchers.bomagri(geo, station, token)
+  )
   const evaporation = agriData(agriEvaporation) ? agriData(agriEvaporation).evaporation : null
 
   const precip = agriData(agriTerrTemp) ? agriData(agriTerrTemp).precip : null

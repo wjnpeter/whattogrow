@@ -81,7 +81,7 @@ async function handler(req: NextApiRequest, res: NextApiResponse) {
 
 
   const models = req.models
-
+  
   // GET
   let foundPlants = await models.Plant.find(filter, null, {
     sort: 'name',

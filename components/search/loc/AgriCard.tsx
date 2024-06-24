@@ -1,6 +1,7 @@
 
-import { Typography, Grid, createStyles, WithStyles } from '@material-ui/core';
-import { withStyles, Theme } from '@material-ui/core/styles';
+import { Typography, Grid } from '@mui/material';
+import { Theme } from '@mui/material/styles';
+import { withStyles, WithStyles, createStyles } from '@mui/styles';
 
 import VLine from './VLine'
 import Number from './Number'

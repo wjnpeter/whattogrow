@@ -3,8 +3,7 @@ import _ from 'lodash'
 import qs from 'qs'
 
 import { useContext } from 'react';
-import { Container, Grid } from '@material-ui/core';
-import Skeleton from '@material-ui/lab/Skeleton';
+import { Container, Grid, Skeleton } from '@mui/material';
 
 import Plant from './Plant'
 import AppContext from '../../lib/contexts'
@@ -41,7 +40,10 @@ export default function PlantPage(props) {
     page: props.page,
   }
 
-  const { data: plants } = useSWR([qs.stringify(filter), appContext.token], fetchers.seeds)
+  const { data: plants } = useSWR(
+    [qs.stringify(filter), appContext.token], 
+    ([filter, token]) => fetchers.seeds(filter, token)
+  )
 
   if (_.isNil(plants)) return loadingEl()
 

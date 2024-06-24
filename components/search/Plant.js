@@ -2,11 +2,12 @@ import _ from 'lodash'
 import clsx from 'clsx'
 
 import React, { useEffect, useState } from 'react';
-import { makeStyles, useTheme } from '@material-ui/core/styles';
-import {Card, CardActionArea, CardActions, CardContent, CardMedia, Button, Typography, GridListTile, Box} from '@material-ui/core';
+import { useTheme } from '@mui/material/styles';
+import { makeStyles } from '@mui/styles';
+import {Card, CardActionArea, CardActions, CardContent, CardMedia, Button, Typography, ImageListItem, Box} from '@mui/material';
 
-import FavoriteIcon from '@material-ui/icons/Favorite';
-import FavoriteBorderIcon from '@material-ui/icons/FavoriteBorder';
+import FavoriteIcon from '@mui/icons-material/Favorite';
+import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 
 import PlantRate from './PlantRate'
 import PlantSchedule from './PlantSchedule'
@@ -98,7 +99,7 @@ export default function Plant({ plant }) {
 
   return (
     <>
-      <GridListTile className={classes.root} key={plant.name} cols={1}>
+      <ImageListItem className={classes.root} key={plant.name} cols={1}>
         <Card className={classes.card}>
           <CardActionArea onClick={handleClickOpen}>
             <CardMedia
@@ -134,7 +135,7 @@ export default function Plant({ plant }) {
             </Button>
           </CardActions>
         </Card>
-      </GridListTile>
+      </ImageListItem>
 
       <PlantDetail plant={plant} open={open} onClose={handleClose} />
     </>

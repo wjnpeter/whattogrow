@@ -17,12 +17,15 @@ export interface UIGeo {
 export default function withGeo(GeoComponent: any) {
   return function Authenticated(props: any) {
 
-    const { data: gGeoRes } = useSWR([props.placeId, props.latlon], fetchers.gGeocoder)
+    const { data: gGeoRes } = useSWR(
+      [props.placeId, props.latlon], 
+      ([placeId, latlon]) => fetchers.gGeocoder(placeId, latlon)
+    )
 
     if (_.isNil(gGeoRes)) {
       return <LoadingPage />
     }
-
+    
     const gGeoResult = gGeoRes.results[0]
 
     const { lat, lng } = gGeoResult.geometry.location

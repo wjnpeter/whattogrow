@@ -5,12 +5,12 @@ import NextLink from 'next/link'
 
 import { useContext, useState } from 'react'
 import {
-  AppBar, Box, Toolbar, Typography, Button, IconButton, WithStyles, createStyles,
-  Menu, MenuItem, Hidden, Divider
-} from '@material-ui/core'
-import { withStyles, Theme } from '@material-ui/core/styles';
-import MoreHorizIcon from '@material-ui/icons/MoreHoriz'
-import InfoIcon from '@material-ui/icons/Info';
+  AppBar, Box, Toolbar, Typography, Button, IconButton,
+  Menu, MenuItem, Divider, Theme
+} from '@mui/material'
+import { withStyles, WithStyles, createStyles } from '@mui/styles';
+import MoreHoriz from '@mui/icons-material/MoreHoriz'
+import Info from '@mui/icons-material/Info';
 
 import AppContext from '../../lib/contexts'
 import { fetchers } from '../../lib/apiFetchers'
@@ -95,7 +95,6 @@ function Header(props: Props) {
   const appContext = useContext(AppContext)
   const [anchorEl, setAnchorEl] = useState(null);
   const [searchBarStandout, setSearchBarStandout] = useState(false)
-  const { data: dsRes } = useSWR([appContext.geo, appContext.token], fetchers.ds)
 
   const handleClick = (event: any) => {
     setAnchorEl(event.currentTarget);
@@ -118,11 +117,9 @@ function Header(props: Props) {
     className={classes.appBar}
   >
     <Toolbar className={classes.toolBar}>
-      <Hidden xsDown={true}>
-        <Box>
-          <Brand />
-        </Box>
-      </Hidden>
+      <Box sx={{ display: { xsDown: 'none' } }}>
+        <Brand />
+      </Box>
 
       <Box className={clsx(classes.searchBar, {
         [classes.standout]: searchBarStandout,
@@ -141,23 +138,22 @@ function Header(props: Props) {
           className={clsx(classes.location, classes.xsDownMarginLeftAuto)}>
           <Typography variant="body1" noWrap>
             {town}
-            <InfoIcon className={classes.locationInfoIcon} />
+            <Info className={classes.locationInfoIcon} />
           </Typography>
         </Button>
 
         {!_.isNil(appContext.geo) && <>
-          <Hidden xsDown={true}>
-            <Box className={classes.rightAction}>
-              <Forecast ds={dsRes} />
-            </Box>
+        {/* FIXME */}
+          {/* <Box sx={{ display: { xs: 'none' } }} className={classes.rightAction}>
+            <Forecast ds={dsRes} />
+          </Box>
 
-            <Box className={classes.rightAction}>
-              <Moon ds={dsRes} />
-            </Box>
-          </Hidden>
+          <Box className={classes.rightAction}>
+            <Moon ds={dsRes} />
+          </Box> */}
 
           <IconButton color='inherit' aria-controls="menu" aria-haspopup="true" onClick={handleClick}>
-            <MoreHorizIcon />
+            <MoreHoriz />
           </IconButton>
           <Menu
             anchorOrigin={{
@@ -172,18 +168,16 @@ function Header(props: Props) {
             onClose={() => setAnchorEl(null)}
             classes={{ paper: classes.menuPaper }}
           >
-            <MenuItem key="Forecast" className={classes.xsDownMenuItem}>
+            {/* <MenuItem key="Forecast" className={classes.xsDownMenuItem}>
               <Forecast ds={dsRes} />
             </MenuItem>
             <MenuItem key="Moon" className={classes.xsDownMenuItem}>
               <Moon ds={dsRes} />
-            </MenuItem>
+            </MenuItem> */}
 
             <MenuItem key="Home" className={classes.xsDownMenuItem}>
-              <NextLink href="/" >
-                <a style={{ color: 'inherit', textDecoration: 'none' }}>
-                  Home
-                </a>
+              <NextLink href="/" style={{ color: 'inherit', textDecoration: 'none' }}>
+                Home
               </NextLink>
             </MenuItem>
 
@@ -205,7 +199,7 @@ function Header(props: Props) {
               About
             </MenuItem>
 
-        </Menu>
+          </Menu>
         </>}
 
       </Box>

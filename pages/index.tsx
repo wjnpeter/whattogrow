@@ -1,6 +1,7 @@
 import React from 'react';
-import { Typography, CssBaseline, Container, Box, WithStyles, createStyles } from '@material-ui/core'
-import { withStyles, Theme } from '@material-ui/core/styles';
+import { Typography, CssBaseline, Container, Box } from '@mui/material';
+import { Theme } from '@mui/material/styles';
+import { withStyles, createStyles, WithStyles } from '@mui/styles';
 
 import { monthNames } from '../lib/utils'
 import Brand from '../components/Brand'
@@ -17,7 +18,12 @@ const styles = (theme: Theme) => createStyles({
     left: "0px",
     right: "0px",
     ...theme.mixins.toolbar,
-    ...theme.mixins.gutters(),
+    paddingLeft: theme.spacing(2),
+    paddingRight: theme.spacing(2),
+    [theme.breakpoints.up('sm')]: {
+      paddingLeft: theme.spacing(3),
+      paddingRight: theme.spacing(3),
+    },
     alignItems: "center",
     zIndex: theme.zIndex.appBar,
   },

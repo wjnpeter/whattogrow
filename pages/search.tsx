@@ -5,8 +5,9 @@ import _ from 'lodash'
 import { GetServerSideProps } from 'next'
 
 import { useState } from 'react'
-import { CssBaseline, Drawer, WithStyles, createStyles } from '@material-ui/core';
-import { withStyles, Theme } from '@material-ui/core/styles';
+import { CssBaseline, Drawer } from '@mui/material';
+import { Theme } from '@mui/material/styles';
+import { withStyles, WithStyles, createStyles } from '@mui/styles';
 
 import Header, { ContentType } from '../components/search/Header'
 import About from '../components/About'
@@ -54,7 +55,12 @@ const styles = (theme: Theme) => createStyles({
       easing: theme.transitions.easing.sharp,
       duration: theme.transitions.duration.leavingScreen,
     }),
-    ...theme.mixins.gutters(),
+    paddingLeft: theme.spacing(2),
+    paddingRight: theme.spacing(2),
+    [theme.breakpoints.up('sm')]: {
+      paddingLeft: theme.spacing(3),
+      paddingRight: theme.spacing(3),
+    },
   },
   contentShift: {
     width: `calc(100% - ${drawerWidth}px)`,
@@ -81,7 +87,10 @@ function Search(props: Props) {
 
 
   const geo = props.geo
-  const { data: tempZone } = useSWR(() => [geo.geo, 'temperature', props.token], fetchers.zone)
+  const { data: tempZone } = useSWR(
+    () => [geo.geo, 'temperature', props.token], 
+    ([geo, about, token]) => fetchers.zone(geo, about, token)
+  )
   if (_.isNil(tempZone)) {
     return <LoadingPage />
   }

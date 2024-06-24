@@ -1,7 +1,7 @@
 import _ from 'lodash'
 
-import { Select, InputLabel, MenuItem, FormControl, Container } from '@material-ui/core';
-import { makeStyles } from '@material-ui/core/styles'
+import { Select, InputLabel, MenuItem, FormControl, Container } from '@mui/material';
+import { makeStyles } from '@mui/styles';
 
 import { monthNames } from '../../lib/utils'
 import { ApiCategories } from '../../lib/api/interfaces'

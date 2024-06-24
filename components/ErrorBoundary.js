@@ -1,5 +1,5 @@
 import React from 'react';
-import BrokenImageIcon from '@material-ui/icons/BrokenImage';
+import BrokenImage from '@mui/icons-material';
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -18,7 +18,7 @@ class ErrorBoundary extends React.Component {
   
   render() {
     if (this.state.errorInfo) {
-      return <BrokenImageIcon />
+      return <BrokenImage />
         // <div>
         //   <h2>Something went wrong.</h2>
         //   <details style={{ whiteSpace: 'pre-wrap' }}>

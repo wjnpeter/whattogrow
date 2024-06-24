@@ -3,8 +3,8 @@ import useSWR from 'swr'
 import axios from 'axios'
 import { useContext } from 'react'
 
-import { makeStyles } from '@material-ui/core/styles';
-import Typography from '@material-ui/core/Typography';
+import { makeStyles } from '@mui/styles';
+import Typography from '@mui/material/Typography';
 
 import Number from './Number'
 import {soilDataType} from '../../../lib/utils'
@@ -17,7 +17,12 @@ const useStyles = makeStyles((theme) => {
   return {
     table: {
     textAlign: 'center',
-    ...theme.mixins.gutters(),
+    paddingLeft: theme.spacing(2),
+    paddingRight: theme.spacing(2),
+    [theme.breakpoints.up('sm')]: {
+      paddingLeft: theme.spacing(3),
+      paddingRight: theme.spacing(3),
+    },
     width: '100%',
     margin: 'auto'
   },
@@ -93,14 +98,21 @@ const makeUiSoil = (agri) => {
 }
 
 export default function Soil() {
+  // FIXME: product 31 is not available
   const classes = useStyles()
   const appContext = useContext(AppContext)
 
   const token = appContext.token
   const geo = appContext.geo
 
-  const { data: stationSoil } = useSWR([geo, 31, token], fetchers.bomstn)
-  const { data: agriSoil } = useSWR(() => [geo, stationSoil.data.station.id, token], fetchers.bomagri)
+  const { data: stationSoil } = useSWR(
+    [geo, (31).toString(), token], 
+    ([geo, product, token]) => fetchers.bomstn(geo, product, token)
+  )
+  const { data: agriSoil } = useSWR(
+    () => [geo, stationSoil.data.station.id, token], 
+    ([geo, station, token]) => fetchers.bomagri(geo, station, token)
+  )
 
   if (!agriSoil || !agriSoil.data) {
     return <></>

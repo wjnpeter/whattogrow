@@ -1,11 +1,6 @@
 require('dotenv').config()
 
 module.exports = {
-  webpack: (config, options) => {
-    config.node = { fs: 'empty' };
-
-    return config
-  },
   env: {
     FIREBASE_API_KEY: process.env.FIREBASE_API_KEY,
     FIREBASE_AUTH_DOMAIN: process.env.FIREBASE_AUTH_DOMAIN,

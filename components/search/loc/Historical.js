@@ -1,8 +1,8 @@
 import useSWR from 'swr'
 
 import { useContext, useState } from 'react'
-import { makeStyles } from '@material-ui/core/styles';
-import { Collapse, Typography, Grid } from '@material-ui/core';
+import { makeStyles } from '@mui/styles';
+import { Collapse, Typography, Grid } from '@mui/material';
 
 import VLine from './VLine'
 import Number from './Number'
@@ -125,12 +125,28 @@ export default function Historical(props) {
   const geo = appContext.geo
   const token = appContext.token
 
-  const { data: rainStation } = useSWR([geo, 139, token], fetchers.bomstn)
-  const { data: meanRain } = useSWR(() => [rainStation.data.station.id, 139, token], fetchers.bomstat)
+  const { data: rainStation } = useSWR(
+    [geo, (139).toString(), token], 
+    ([geo, product, token]) => fetchers.bomstn(geo, product, token)
+  )
+  const { data: meanRain } = useSWR(
+    () => [rainStation.data.station.id, 139, token], 
+    ([station, product, token]) => fetchers.bomstat(station, product, token)
+  )
 
-  const { data: tempStation } = useSWR([geo, 122, token], fetchers.bomstn)
-  const { data: meanMaxTemp } = useSWR(() => [tempStation.data.station.id, 36, token], fetchers.bomstat)
-  const { data: meanMinTemp } = useSWR(() => [tempStation.data.station.id, 38, token], fetchers.bomstat)
+  const { data: tempStation } = useSWR(
+    [geo, (122).toString(), token], 
+    ([geo, product, token]) => fetchers.bomstn(geo, product, token)
+  )
+  // FIXME: 36 and 38 are not available
+  const { data: meanMaxTemp } = useSWR(
+    () => [tempStation.data.station.id, 36, token], 
+    ([station, product, token]) => fetchers.bomstat(station, product, token)
+  )
+  const { data: meanMinTemp } = useSWR(
+    () => [tempStation.data.station.id, 38, token], 
+    ([station, product, token]) => fetchers.bomstat(station, product, token)
+  )
 
   return (
     <>

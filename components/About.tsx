@@ -1,5 +1,6 @@
-import { Typography, Container, WithStyles, createStyles, Avatar, Box } from '@material-ui/core'
-import { withStyles, Theme } from '@material-ui/core/styles';
+import { Typography, Container, Avatar, Box } from '@mui/material';
+import { Theme } from '@mui/material/styles';
+import { withStyles, createStyles, WithStyles } from '@mui/styles';
 
 const styles = (theme: Theme) => createStyles({
   root: {
@@ -33,7 +34,7 @@ function About(props: Props) {
           <br />
         Seed Hunt started as a personal small project built to gather useful information like historical climate, moon, weather, etc., etc. that related to planting.<br />
           <br />
-        For any feedback, suggestions or partnership opportunities, reach out to wytheingz@gmail.com.<br />
+        For any feedback, suggestions or partnership opportunities, reach out appstudio.pc@gmail.com.<br />
           <br />
         </Typography>
       </Container>
